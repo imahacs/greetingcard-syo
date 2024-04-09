@@ -60,6 +60,9 @@ body{
 
 .name{
 top: 80%; left: 50%; transform: translate(-30%, -50%);
+ /* position: absolute;
+            top: 50px; 
+            left: 50px;  */
 }
 
 .custom-button {
