@@ -10,6 +10,11 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <style>
+    /* @font-face {
+      font-family: 'Cairo', sans-serif;
+      src: url('https://fonts.googleapis.com/css2?family=Cairo&display=swap') format('truetype');
+    } */
+
     @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 
     body {
@@ -148,9 +153,18 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIxVXM" crossorigin="anonymous"></script>
 
   <script src="https://unpkg.com/bootstrap-icons@3.1.0"></script>
+  <script>
+    // Get the H2 element
+    var h2Element = document.getElementById("static-h2");
+
+    // Set the CSS properties for positioning
+    h2Element.style.position = "absolute";
+    h2Element.style.top = "50px"; // Adjust the top position as per your requirement
+    h2Element.style.left = "50px"; // Adjust the left position as per your requirement
+  </script>
 
   <script type="text/javascript">
-    var imagesrc = "img/example.png";
+    // var imagesrc = "img/example.png";
     var logo = "img/SYO_Logo_AR_Horizontal_Color.svg";
     var eid = "img/EidAl-Fiter.png";
 
@@ -187,7 +201,7 @@
       var message = $('#message').val();
       var to = $('#to').val();
       var fromSYO = $('#fromSYO').val();
-      $("img").attr("src", imagesrc);
+      // $("img").attr("src", imagesrc);
       $("img").attr("src", eid);
       $('.logo').attr("src", logo);
       $('.eid').attr("src", eid);
@@ -214,6 +228,8 @@
     //   });
     // });
 
+
+
     // Download card
     var element = $(".cardSYO");
     $("#downloadTWO").on('click', function () {
@@ -221,7 +237,7 @@
         onrendered: function (canvas) {
           var imageData = canvas.toDataURL("image/png");
           var newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
-          $('#downloadTWO').attr("download", "SYOGreeting.png").attr("href", newData);
+          $('#downloadTWO').attr("download", "image.png").attr("href", newData);
         }
       });
     });
