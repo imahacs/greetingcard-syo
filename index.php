@@ -104,12 +104,11 @@
   <!-- card section -->
   <div class="container">
     <!-- preview -->
-    <p class="text-center mt-3">النتيجة النهائية</p>
+    <p class="text-center mt-3">بطاقة التهنئة</p>
     <div class="cardSYO">
       <div class="img">
         <img src="" class="img-fluid h-100 w-100 eid" style="object-fit: cover;">
-        <h2 class="text-center text-sm-start mt-3 position-absolute top-50 start-50 translate-middle text-white"
-          id="h2fromSYO">
+        <h2 class="name text-center mt-3 position-absolute text-white" id="h2fromSYO">
         </h2>
       </div>
     </div>
@@ -169,7 +168,7 @@
           contentType: false,
           processData: false,
           success: function (response) {
-            imagesrc = response;
+            eid = response;
           }
         });
       });
@@ -189,6 +188,7 @@
       var to = $('#to').val();
       var fromSYO = $('#fromSYO').val();
       $("img").attr("src", imagesrc);
+      $("img").attr("src", eid);
       $('.logo').attr("src", logo);
       $('.eid').attr("src", eid);
       $('.card').css("background", background);
