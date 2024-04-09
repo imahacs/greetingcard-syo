@@ -221,7 +221,7 @@
         onrendered: function (canvas) {
           var imageData = canvas.toDataURL("image/png");
           var newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
-          $('#downloadTWO').attr("download", "image.png").attr("href", newData);
+          $('#downloadTWO').attr("download", "SYOGreeting.png").attr("href", newData);
         }
       });
     });
