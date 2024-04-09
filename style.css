@@ -1,0 +1,107 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 27%, rgba(222,255,230,1) 61%);
+  text-align: center;
+
+}
+.header-section{
+  color: #056839;
+  display: flex; 
+  justify-content: space-between;
+   align-items: center; 
+} 
+
+.logo {
+  width: 100%;
+  height: 70px;
+  align-items: right;
+  margin-right: 0;
+  background-color: #ffffff;
+}
+
+.header-title{
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #056839;
+}
+
+
+.header-subtitle{
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #056839;
+}
+
+.header-description{
+  font-size: 20px;
+  color: #3D4A3D;
+}
+
+
+  .title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .social-icon {
+    display: inline-block;
+    margin: 0 5px;
+    color: #333;
+    font-size: 1.5rem;
+  } 
+
+.custom-button {
+  background-color: #056839;
+}
+
+.custom-button-text {
+  color: white;
+}
+
+/* 
+.card{
+  width: 400px;
+  margin: auto;
+  padding: 10px 10px 0px 10px;
+  border: 1px solid;
+} 
+
+.img{
+  width: 400px;
+  height: 400px;
+} 
+
+.container{
+  padding: 5px 0px;
+} 
+
+ .container h2{
+  margin: 0px;
+  font-size: 22px;
+}
+
+.container .center{
+  text-align: center;
+  padding: 10px 0;
+  font-size: 17px;
+}
+
+.container .right{
+  text-align: right;
+}
+
+button{
+  display: block;
+  margin: 5px auto;
+  width: 400px;
+  padding: 5px 0;
+  font-size: 18px;
+} */
