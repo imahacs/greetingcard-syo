@@ -48,31 +48,38 @@
     </div>
   </header>
 
-  <!-- form section -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <label for="from" class="mt-3">أسم المرسل</label>
-        <input type="text" id="fromSYO" class="form-control mb-3" placeholder="من">
-      </div>
-    </div>
-  </div>
-
   <!-- card section -->
   <div class="container">
     <!-- preview -->
     <p class="text-center mt-3">بطاقة التهنئة</p>
     <div class="cardSYO">
       <div class="img">
-        <img src="" class="img-fluid h-100 w-100 eid" style="object-fit: cover;">
+        <img src="./img/EidAl-Fiter.png" class="img-fluid h-100 w-100 eid" style="object-fit: cover;">
         <h2 class="name text-center mt-3 position-absolute text-white" id="h2fromSYO">
         </h2>
       </div>
     </div>
   </div>
-  <button type="button" name="button" class="btn btn-primary custom-button d-block mx-auto mt-4 w-25">
-    <a href="#" id="downloadTWO"><span class="custom-button-text">تنزيل</span></a>
-  </button>
+
+  <!-- form section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <form action="gen_image.php" method="POST" enctype="multipart/form-data">
+          <label for="from" class="mt-3">أسم المرسل</label>
+          <input type="text" name="formSYO" id="fromSYO" class="form-control mb-3" placeholder="من">
+          <input type="hidden" name="eid" id="eid" class="form-control mb-3" placeholder="من"
+            value="img/EidAl-Fiter.png">
+          <button type="submit" name="button" class="btn btn-primary custom-button d-block mx-auto mt-4 w-25"
+            id="downloadTWO">
+            تنزيل
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
 
 
 
@@ -98,34 +105,6 @@
 
   <script src="https://unpkg.com/bootstrap-icons@3.1.0"></script>
 
-  <script type="text/javascript">
-    var logo = "img/SYO_Logo_AR_Horizontal_Color.svg";
-    var eid = "img/EidAl-Fiter.png";
 
-    // Real time preview card
-    setInterval(function () {
-      preview();
-    }, 0);
-
-    function preview() {
-      var text = $('#text').val();
-      var fromSYO = $('#fromSYO').val();
-      $('.logo').attr("src", logo);
-      $('.eid').attr("src", eid);
-      $('#h2fromSYO').text(fromSYO);
-    }
-
-    // Download card
-    var element = $(".cardSYO");
-    $("#downloadTWO").on('click', function () {
-      html2canvas(element, {
-        onrendered: function (canvas) {
-          var imageData = canvas.toDataURL("image/png");
-          var newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
-          $('#downloadTWO').attr("download", "image.png").attr("href", newData);
-        }
-      });
-    });
-  </script>
 
 </html>
