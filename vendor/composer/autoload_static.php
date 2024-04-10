@@ -7,6 +7,11 @@ namespace Composer\Autoload;
 class ComposerStaticInit78d7fbef3191c05c0fbaffe81b542063
 {
     public static $prefixLengthsPsr4 = array (
+        'G' => 
+        array (
+            'GDText\\Tests\\' => 13,
+            'GDText\\' => 7,
+        ),
         'A' => 
         array (
             'ArPHP\\I18N\\' => 11,
@@ -14,6 +19,14 @@ class ComposerStaticInit78d7fbef3191c05c0fbaffe81b542063
     );
 
     public static $prefixDirsPsr4 = array (
+        'GDText\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stil/gd-text/tests',
+        ),
+        'GDText\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stil/gd-text/src',
+        ),
         'ArPHP\\I18N\\' => 
         array (
             0 => __DIR__ . '/..' . '/khaled.alshamaa/ar-php/src',

@@ -14,7 +14,7 @@ $image_width = imagesx($image); // Get the width of the image
 // Set the font and text color
 $font = 'bootstrap/font/Cairo/static/Cairo-Regular.ttf';
 // Path to your font file
-$textColor = imagecolorallocate($image, 5, 104, 57); // White color
+$textColor = imagecolorallocate($image, 255, 255, 255); // White color
 
 // Set the text to be written on the image
 // Render Arabic text using I18N_Arabic
@@ -34,7 +34,7 @@ $textHeight = $bbox[7] - $bbox[1]; // In case you also want to vertically center
 
 // Set the position where the text will be written to center it
 $x = (int) round(($image_width - $textWidth) / 2);
-$y = 780;
+$y = 1780;
 // You can adjust this similarly for vertical centering
 
 
