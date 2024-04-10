@@ -11,11 +11,6 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <style>
-    /* @font-face {
-      font-family: 'Cairo', sans-serif;
-      src: url('https://fonts.googleapis.com/css2?family=Cairo&display=swap') format('truetype');
-    } */
-
     @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 
     body {
@@ -25,6 +20,7 @@
 </head>
 
 <body>
+  <!-- This code is for existing design -->
 
   <!-- navbar section -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -49,11 +45,10 @@
             تهنئة</p>
         </div>
       </div>
-
     </div>
   </header>
 
-
+  <!-- form section -->
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-sm-12">
@@ -62,6 +57,7 @@
       </div>
     </div>
   </div>
+
   <!-- card section -->
   <div class="container">
     <!-- preview -->
@@ -87,13 +83,6 @@
         <div class="col-md-6 text-center">
           <h1 class="title">كل عام وكل عيد .. بين أهلك وناسك</h1>
         </div>
-        <div class="col-md-6 text-center text-md-end">
-          <div class="social-icons">
-            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
-          </div>
-        </div>
       </div>
     </div>
   </footer>
@@ -110,29 +99,8 @@
   <script src="https://unpkg.com/bootstrap-icons@3.1.0"></script>
 
   <script type="text/javascript">
-    var imagesrc = "img/example.png";
     var logo = "img/SYO_Logo_AR_Horizontal_Color.svg";
     var eid = "img/EidAl-Fiter.png";
-
-    // Upload image to the directory
-
-    $(document).ready(function () {
-      $('#image').change(function () {
-        var formData = new FormData();
-        var files = $('#image')[0].files;
-        formData.append('image', files[0]);
-        $.ajax({
-          url: 'upload.php',
-          type: 'post',
-          data: formData,
-          contentType: false,
-          processData: false,
-          success: function (response) {
-            eid = response;
-          }
-        });
-      });
-    });
 
     // Real time preview card
     setInterval(function () {
@@ -140,26 +108,11 @@
     }, 0);
 
     function preview() {
-      var background = $('#background').val();
       var text = $('#text').val();
-      var border = $('#border').val();
-      var from = $('#from').val();
-      var message = $('#message').val();
-      var to = $('#to').val();
       var fromSYO = $('#fromSYO').val();
-      $("img").attr("src", imagesrc);
-      $("img").attr("src", eid);
       $('.logo').attr("src", logo);
       $('.eid').attr("src", eid);
-      $('.card').css("background", background);
-      $('.card').css("color", text);
-      $('.card').css("border-color", border);
-
-      $('#h2from').text(from);
-      $('#pmessage').text(message);
-      $('#h2to').text(to);
       $('#h2fromSYO').text(fromSYO);
-
     }
 
     // Download card

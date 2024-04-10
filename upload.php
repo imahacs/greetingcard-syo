@@ -1,3 +1,4 @@
+<!--This code for img upload -->
 <?php
 $src = $_FILES["image"]["tmp_name"];
 $imageName = $_FILES["image"]["name"];
