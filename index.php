@@ -53,51 +53,6 @@
     </div>
   </header>
 
-  <!--form section-->
-  <!-- <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <label for="image" class="mt-3">قم بإرفاق تصميم</label>
-        <input type="file" id="image" class="form-control mb-3" value="">
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <label for="background" class="mt-3">لون الخلفية</label>
-        <input type="text" id="background" class="form-control mb-3" placeholder="لون الخلفية">
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <label for="text" class="mt-3">لون النص</label>
-        <input type="text" id="text" class="form-control mb-3" placeholder="لون النص">
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <label for="border" class="mt-3">لون الحدود</label>
-        <input type="text" id="border" class="form-control mb-3" placeholder="لون الحدود">
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <label for="from" class="mt-3">أسم المرسل</label>
-        <input type="text" id="from" class="form-control mb-3" placeholder="من">
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <label for="message" class="mt-3">الرسالة</label>
-        <input type="text" id="message" class="form-control mb-3" placeholder="الرسالة">
-      </div>
-    </div>
-  </div> -->
-
-  <!-- card section -->
-  <!-- <div class="container">
-    <p class="text-center mt-3">النتيجة النهائية</p>
-    <div class="card">
-      <div class="img">
-        <img src="" class="img-fluid h-20" style="width: 100%; height: 100%;">
-      </div>
-      <h2 class="text-center text-sm-start mt-3" id="h2from"></h2>
-      <p class="text-center mb-3" id="pmessage"></p>
-      <h2 class="text-center text-sm-end mt-3" id="h2to"></h2>
-    </div>
-  </div>
-  <button type="button" name="button" class="btn btn-primary custom-button d-block mx-auto mt-4 w-25">
-    <a href="#" id="download"><span class="custom-button-text">تنزيل</span></a>
-  </button> -->
 
   <div class="container">
     <div class="row">
@@ -122,7 +77,6 @@
   <button type="button" name="button" class="btn btn-primary custom-button d-block mx-auto mt-4 w-25">
     <a href="#" id="downloadTWO"><span class="custom-button-text">تنزيل</span></a>
   </button>
-  <!-- <a href="#" id="download"> <button type="button" name="button" class="btn btn-primary  text-black"> تنزيل</a> </button> -->
 
 
 
@@ -154,18 +108,9 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIxVXM" crossorigin="anonymous"></script>
 
   <script src="https://unpkg.com/bootstrap-icons@3.1.0"></script>
-  <script>
-    // Get the H2 element
-    var h2Element = document.getElementById("static-h2");
-
-    // Set the CSS properties for positioning
-    h2Element.style.position = "absolute";
-    h2Element.style.top = "50px"; // Adjust the top position as per your requirement
-    h2Element.style.left = "50px"; // Adjust the left position as per your requirement
-  </script>
 
   <script type="text/javascript">
-    // var imagesrc = "img/example.png";
+    var imagesrc = "img/example.png";
     var logo = "img/SYO_Logo_AR_Horizontal_Color.svg";
     var eid = "img/EidAl-Fiter.png";
 
@@ -202,7 +147,7 @@
       var message = $('#message').val();
       var to = $('#to').val();
       var fromSYO = $('#fromSYO').val();
-      // $("img").attr("src", imagesrc);
+      $("img").attr("src", imagesrc);
       $("img").attr("src", eid);
       $('.logo').attr("src", logo);
       $('.eid').attr("src", eid);
@@ -216,20 +161,6 @@
       $('#h2fromSYO').text(fromSYO);
 
     }
-
-    // Download card
-    // var element = $(".card");
-    // $("#download").on('click', function () {
-    //   html2canvas(element, {
-    //     onrendered: function (canvas) {
-    //       var imageData = canvas.toDataURL("image/png");
-    //       var newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
-    //       $('#download').attr("download", "image.png").attr("href", newData);
-    //     }
-    //   });
-    // });
-
-
 
     // Download card
     var element = $(".cardSYO");
