@@ -2,7 +2,6 @@
 
 require './vendor/autoload.php';//
 
-// die($_POST['eid']);
 
 // Set the content type header
 header('Content-Type: image/png; charset=utf8');
@@ -23,7 +22,7 @@ $arabic = new \ArPHP\I18N\Arabic();
 $renderedText = $arabic->utf8Glyphs($arabicText);
 
 // Font size and angle
-$fontSize = 30;
+$fontSize = 50;
 $angle = 0;
 
 // Calculate text width and height
@@ -35,7 +34,6 @@ $textHeight = $bbox[7] - $bbox[1]; // In case you also want to vertically center
 // Set the position where the text will be written to center it
 $x = (int) round(($image_width - $textWidth) / 2);
 $y = 1780;
-// You can adjust this similarly for vertical centering
 
 
 
